@@ -1,6 +1,6 @@
 <?php
 // URL of SHOUTCast streaming
-$url = 'http://65.21.54.164:8220/plus';
+$url = 'http://65.21.54.164:8000/xtra';
 
 
 // true or false to get the next song
