@@ -160,17 +160,17 @@ if(!empty($url)) {
 			$array['currentArtist'] = explode(";",$currently_playing[0])[0];
 
 			// check if it is alredy in played songs and append if necessary
-			$track_history = file("afroplus.log");
+			$track_history = file("afroxtra.log");
 			$track_list = array_slice($track_history, 0, 20);
 			if (stripos($track_history[0], $currently_playing[0]." - ".$currently_playing[1]) === false){
 				array_unshift($track_list, $currently_playing[0]." - ".$currently_playing[1]."\n");
-				file_put_contents("afroplus.log", $track_list);
+				file_put_contents("afroxtra.log", $track_list);
 			}
 		} else {
 			$array = ['error' => 'Failed to fetch data'];
 		}
 
-		$track_history = file("afroplus.log");
+		$track_history = file("afroxtra.log");
 		// remove first element from history
 		array_shift($track_history);
 
